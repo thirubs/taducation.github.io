@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TADucation - Your Gateway to Global Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Dark slate gray text */
+            padding-top: 4rem; /* Space for fixed navigation bar */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .section-title {
+            border-bottom: 2px solid #cbd5e1; /* Light gray border */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b; /* Darker slate gray for titles */
+        }
+        .link-style {
+            color: #ef4444; /* Red for links */
+            text-decoration: none;
+        }
+        .link-style:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+        }
+        /* Hero Section Specific Styles */
+        .hero-section {
+            background: linear-gradient(to right, #ef4444, #f87171); /* Red gradient */
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .hero-section h1 {
+            font-size: 3rem; /* text-5xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 1rem;
+        }
+        .hero-section p {
+            font-size: 1.25rem; /* text-xl */
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .hero-button {
+            background-color: #fcd34d; /* Amber */
+            color: #1e293b; /* Dark text */
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            display: inline-block;
+        }
+        .hero-button:hover {
+            background-color: #fbbf24; /* Darker amber */
+            transform: translateY(-2px);
+        }
+
+        /* Services Section Specific Styles */
+        .service-group {
+            margin-bottom: 2rem;
+			text-align: center;
+			justify-content:center;
+        }
+        .service-group h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ef4444; /* Red for group titles */
+            margin-bottom: 1rem;
+            text-align: center; /* This is already present and should work */
+            /* Add or confirm display: block; or width: 100%; if it's not spanning full width */
+            width: 100%; /* Ensure it takes full width of its parent */
+            display: block; /* Ensure it behaves as a block element */
+			justify-content:center;
+        }
+        .service-item {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .service-item i {
+            font-size: 3rem;
+            color: #ef4444; /* Red icon */
+            margin-bottom: 1rem;
+        }
+        .service-item h4 { /* Changed from h3 to h4 for sub-items */
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+			justify-content:center;
+            margin-bottom: 0.75rem;
+        }
+        .service-item p {
+            color: #475569;
+        }
+
+        /* Contact Form Styles */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #334155;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            color: #334155;
+            background-color: #fefefe;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ef4444; /* Red focus border */
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2); /* Red shadow */
+        }
+        .submit-button {
+            background-color: #ef4444; /* Red */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .submit-button:hover {
+            background-color: #dc2626; /* Darker red */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+            /* This is the key change to center grid items within the service-group */
+        .service-grid {
+            display: grid; /* Ensure it's explicitly a grid */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* More flexible columns */
+            gap: 1.5rem; /* Matches your existing gap-6 (1.5rem in Tailwind) */
+            justify-content: center; /* Centers the grid items within the grid tracks */
+            max-width: 1200px; /* Or a max-width that makes sense for your layout */
+            margin-left: auto; /* Centers the grid container itself */
+            margin-right: auto; /* Centers the grid container itself */
+        }
+
+        /* Responsive adjustments for service-grid - these can now be simplified or removed */
+        @media (max-width: 768px) { /* Small screens */
+            .service-grid {
+                grid-template-columns: 1fr; /* Force single column on small screens */
+                /* No need for justify-content as 1 item per row will always be centered */
+            }
+        }
+        /* You might not need specific md/lg media queries for grid-template-columns anymore
+           if repeat(auto-fit) handles it well, but keep them if you want precise control. */
+        @media (min-width: 768px) { /* md breakpoint for 2 columns */
+            .service-grid {
+                grid-template-columns: repeat(2, minmax(280px, 1fr)); /* Force 2 columns */
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint for 3 columns */
+            .service-grid {
+                grid-template-columns: repeat(3, minmax(280px, 1fr)); /* Force 3 columns */
+            }
+        }
+        }
+
+        /* Logo specific styles for the new logo */
+        :root {
+            --target-color: #E53935;       /* Red for Target */
+            --apply-color: #8E24AA;        /* Purple for Apply */
+            --depart-color: #1E88E5;       /* Blue for Depart */
+            /* Removed light text/tagline colors as they will be overridden by .logo-box */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            /* No longer a gap here, as tagline is now nested */
+            /* No default color here, as the .logo-box will dictate colors inside */
+        }
+
+        /* New styles for the white logo box */
+        .logo-box {
+            background-color: white;
+            padding: 0.5rem 0.75rem; /* Adjust padding as needed */
+            border-radius: 0.5rem; /* Slightly rounded corners */
+            display: flex; /* Make it a flex container so content aligns */
+            align-items: center; /* Vertically align items within the box */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+
+        .logo-box .logo-symbol { /* Target symbol within the box */
+            width: 2.2rem;
+            height: 2.2rem;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+            animation: bounce 1.6s ease-in-out infinite;
+        }
+
+        .logo-box .logo-symbol rect {
+            transform-origin: bottom;
+        }
+
+        /* Animation for logo segments */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .segment-1 { fill: var(--target-color); animation-delay: 0s; }
+        .segment-2 { fill: var(--apply-color); animation-delay: 0.1s; }
+        .segment-3 { fill: var(--depart-color); animation-delay: 0.2s; }
+
+        /* New flex container for the text part of the logo */
+        .logo-text-group {
+            display: flex;
+            flex-direction: column; /* Stack name and tagline vertically */
+            align-items: flex-start; /* Align text to the left */
+            line-height: 1; /* Keep line height tight */
+        }
+
+        .logo-name {
+            font-size: 2rem; /* Adjust as needed */
+            font-weight: 700;
+            line-height: 1;
+            display: flex;
+            align-items: baseline; /* Align 'TAD' and 'ucation' */
+            /* Override light text color for white box */
+            color: #1e293b; /* Darker slate for main name on white background */
+        }
+        .logo-name .t { color: var(--target-color); }
+        .logo-name .a { color: var(--apply-color); }
+        .logo-name .d { color: var(--depart-color); }
+        .logo-name .ucation {
+            font-size: 0.7em; /* Smaller relative to TAD */
+            font-weight: 400;
+            /* Override light text color for white box */
+            color: #334155; /* Dark slate for 'ucation' on white background */
+            margin-left: 0.1em; /* Small space after D */
+        }
+        .logo-name span:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem; /* Smaller for tagline */
+            font-weight: 400;
+            /* Override light tagline color for white box */
+            color: #475569; /* Slate gray for tagline on white background */
+            letter-spacing: 0.05em;
+            display: flex; /* To align words horizontally within the tagline */
+            gap: 0.25rem; /* Space between words */
+            margin-top: 0.2rem; /* Small space between logo name and tagline */
+        }
+        .logo-tagline .word {
+            font-weight: 600; /* Make words bold */
+        }
+        .logo-tagline .target-word { color: var(--target-color); }
+        .logo-tagline .apply-word { color: var(--apply-color); }
+        .logo-tagline .depart-word { color: var(--depart-color); }
+
+
+        /* Mentor Achievements List Styling */
+        .achievements-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+        .achievements-list li {
+            background-color: #f0f4f8; /* Light background for list items */
+            border-left: 4px solid #ef4444; /* Red border on the left */
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 1.05rem;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        .achievements-list li strong {
+            color: #1e293b;
+        }
+        .achievements-list li .icon {
+            color: #ef4444; /* Red icon */
+            font-size: 1.5rem;
+        }
+
+        /* Floating Social Media Styles for TADucation */
+        .social-float-tad {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ffffff;
+            border-top-left-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 0.75rem 0.5rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem; /* Space between icons */
+        }
+        .social-float-tad a {
+            display: block;
+            padding: 0.5rem;
+            color: #475569; /* Slate gray for icons */
+            transition: color 0.2s ease-in-out;
+        }
+        .social-float-tad a:hover {
+            color: #ef4444; /* Red on hover */
+        }
+        .social-float-tad i {
+            font-size: 1.5rem; /* Icon size */
+        }
+        .social-float-tad svg { /* Style for inline SVG icon */
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor; /* Inherit color from parent 'a' tag */
+        }
+        @media (max-width: 768px) {
+            .social-float-tad {
+                right: 0.5rem;
+                padding: 0.5rem 0.25rem;
+                gap: 0.5rem;
+            }
+            .social-float-tad i, .social-float-tad svg {
+                font-size: 1.2rem;
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            /* Adjust logo for smaller screens if needed */
+            .logo-name {
+                font-size: 1.8rem; /* Slightly smaller on small screens */
+            }
+            .logo-name .ucation {
+                font-size: 0.65em;
+            }
+            .logo-tagline {
+                font-size: 0.7rem; /* Slightly smaller tagline */
+                margin-top: 0.1rem;
+            }
+            .logo-box {
+                padding: 0.4rem 0.6rem; /* Adjust padding for small screens */
+            }
+        }
+		/* New rules to apply specific colors to the spans */
+        .service-group h3 .text-blue-600 { /* Target span */
+            color: var(--target-color); /* Use the target color variable */
+        }
+        .service-group h3 .text-purple-600 { /* Apply span */
+            color: var(--apply-color); /* Use the apply color variable */
+        }
+        .service-group h3 .text-green-600 { /* Depart span */
+            color: var(--depart-color); /* Use the depart color variable */
+        }
+		
+		.text-center .text-green-600 { /* Depart span */
+            color: var(--depart-color); /* Use the depart color variable */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 left-0 w-full bg-red-700 text-white p-4 shadow-md z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="#" class="logo-container">
+                <div class="logo-box">
+                    <svg class="logo-symbol" viewBox="0 0 100 100">
+                        <rect class="segment-1" x="10" y="40" width="25" height="20" rx="5" ry="5"/>
+                        <rect class="segment-2" x="38" y="30" width="25" height="40" rx="5" ry="5"/>
+                        <rect class="segment-3" x="66" y="20" width="25" height="60" rx="5" ry="5"/>
+                    </svg>
+
+                    <div class="logo-text-group">
+                        <div class="logo-name">
+                            <span class="t">T</span><span class="a">A</span><span class="d">D</span><span class="ucation">ucation</span>
+                        </div>
+                        <span class="logo-tagline">
+                            <span class="word target-word">TARGET</span>
+                            <span class="word apply-word">APPLY</span>
+                            <span class="word depart-word">DEPART</span>
+                        </span>
+                    </div>
+                </div>
+                </a>
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:space-x-10 mt-2 md:mt-0">
+                <a href="#home" class="text-lg font-medium hover:text-red-200 transition-colors">Home</a>
+                <a href="#about-taducation" class="text-lg font-medium hover:text-red-200 transition-colors">About TADucation</a>
+                <a href="#our-mentor" class="text-lg font-medium hover:text-red-200 transition-colors">Our Mentor</a>
+                <a href="#services" class="text-lg font-medium hover:text-red-200 transition-colors">Services</a>
+                <a href="#contact" class="text-lg font-medium hover:text-red-200 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <section id="home" class="hero-section">
+            <h1>Unlock Your Global Education Journey</h1>
+            <p>Expert guidance and personalized mentoring for students aspiring to study abroad.</p>
+            <a href="#services" class="hero-button">Explore Our Services</a>
+        </section>
+
+        <section id="about-taducation" class="card">
+            <h2 class="text-3xl font-semibold section-title">About TADucation</h2>
+            <p class="leading-relaxed">
+                TADucation is an educational consultancy based in Australia, Brisbane, dedicated to empowering students to achieve their dreams of higher education abroad. We offer comprehensive, personalized guidance, from selecting the right program and university to navigating the application process and preparing for a successful academic journey overseas. Our approach is built on understanding each student's unique path, providing tailored support to unlock world-class educational experiences.
+            </p>
+        </section>
+
+        <section id="our-mentor" class="card">
+            <h2 class="text-3xl font-semibold section-title">Our Mentor: Dr. Thiru</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                    <img src="Thiru Headshot.jpg" alt="Dr. Thiru Balasubramaniam" class="w-full h-full object-cover">
+                    </div>
+                <p class="leading-relaxed md:text-left text-center">
+                    TADucation is founded by Dr. Thiru, whose extensive personal and professional journey provides unparalleled expertise for aspiring international students. His background highlights a deep understanding of global academic landscapes:
+                </p>
+            </div>
+            <ul class="achievements-list">
+                <li><i class="fas fa-flag icon"></i> <strong>Indian-born Australian Citizen:</strong> Dr. Thiru's journey from India to Australian citizenship through education provides a unique and empathetic perspective on international student pathways.</li>
+                <li><i class="fas fa-graduation-cap icon"></i> <strong>PhD in Data Science (QUT, Australia):</strong> Dr. Thiru pursued his Ph.D. directly after his Bachelor of Engineering (BE) through academic research excellence, showcasing a strong foundation in advanced data science.</li>
+                <li><i class="fas fa-medal icon"></i> <strong>Prestigious Scholarships (Totaling ~AUD 261,135 / ~INR 1.44 Crore over 3.5 years):</strong> Recipient of the QUT Postgraduate Research Award (PRA) (AUD 37,010 / ~INR 20.35 Lakh annually) and Tuition Fee Scholarship (AUD 37,600 / ~INR 20.68 Lakh annually) for 3.5 years.</li>
+                <li><i class="fas fa-award icon"></i> <strong>National Innovation Visa (Subclass 858):</strong> Granted for national important achievement, reflecting his significant contributions.</li>
+                <li><i class="fas fa-flask icon"></i> <strong>10 Years of Research Experience:</strong> Extensive background in cutting-edge research, ensuring up-to-date academic insights.</li>
+                <li><i class="fas fa-chalkboard-teacher icon"></i> <strong>8 Years of Teaching Experience:</strong> Proven ability to mentor and educate students effectively.</li>
+                <li><i class="fas fa-university icon"></i> <strong>Current Academic in Australia:</strong> Research Fellow and Sessional Academic at Queensland University of Technology (QUT).</li>
+                <li><i class="fas fa-book icon"></i> <strong>40+ Publications:</strong> A strong publication record with an H-index of 14, demonstrating significant academic impact.</li>
+                <li><i class="fas fa-globe icon"></i> <strong>International Academic Background:</strong> Significant research contributions at the **Massachusetts Institute of Technology (MIT) - Singapore University of Technology and Design (SUTD) International Design Centre and Kyungpook National University (KNU), South Korea.</li>
+            </ul>
+            <p class="mt-6 leading-relaxed">
+                Dr. Thiru's unique blend of academic excellence, research impact, and personal experience as an international student and Australian resident makes him an invaluable <b>mentor</b> for your global education journey.
+            </p>
+        </section>
+
+        <section id="services" class="card">
+            <h2 class="text-3xl font-semibold section-title">Our Services</h2>
+            <p class="mb-6 leading-relaxed">
+                At TADucation, our services are tailored to your individual academic profile, aspirations, and circumstances. Dr. Thiru provides personalized mentoring and guidance, supporting students at every level of their higher education journey, from Bachelor's to Master's and PhD.
+            </p>
+
+            <div class="service-group", align="center">
+                <h3><span class="text-blue-600">Target Your Future </span> </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-university"></i>
+                        <h4>University & Course Selection</h4>
+                        <p>Personalized recommendations based on your academic profile, career goals, and preferences.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Academic Mentoring (All Levels)</h4>
+                        <p>Comprehensive support and mentoring to help you excel in your studies abroad, tailored for Bachelor's, Master's, and PhD levels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-group">
+                <h3><span class="text-purple-600">Apply with Confidence</span> </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Application Assistance</h4>
+                        <p>Expert guidance on crafting compelling applications, essays, and statements of purpose.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-comments"></i>
+                        <h4>Interview Preparation</h4>
+                        <p>Mock interviews and tips to help you confidently ace your university admissions interviews.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-group">
+                <h3><span class="text-green-600">Depart for Success</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>Visa Guidance</h4>
+                        <p>Support through the student visa application process, ensuring all requirements are met.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-plane-departure"></i>
+                        <h4>Pre-Departure Briefing</h4>
+                        <p>Essential information and advice to prepare you for life and study in a new country.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2 class="text-3xl font-semibold section-title">Contact Us</h2>
+            <p class="mb-6 text-center text-gray-700">Have questions? Reach out to us using the form below or directly via email.</p>
+            <form action="#" method="POST" class="max-w-lg mx-auto">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required class="rounded-md">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required class="rounded-md">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Inquiry about services" required class="rounded-md">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your academic goals..." required class="rounded-md"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="submit-button rounded-md">Send Message</button>
+                </div>
+            </form>
+            <p class="text-center mt-6 text-gray-600">
+                Alternatively, email us directly at: <a href="mailto:info@taducation.com" class="link-style">info@taducation.com</a>
+            </p>
+            <p class="text-center mt-4 text-gray-700 font-semibold">
+                <span class="text-green-600">Departing</span> to Brisbane? I can personally welcome you!
+            </p>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12 py-4">
+            <p>&copy; 2025 TADucation. All rights reserved.</p>
+            <p>Empowering global academic journeys.</p>
+        </footer>
+    </div>
+
+    <div class="social-float-tad">
+        <a href="mailto:info@taducation.com" target="_blank" rel="noopener noreferrer" title="Email Us">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://au.linkedin.com/in/dr-thiru-balasubramaniam-4bb78895" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/Thirubs" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="block">
+                <g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.21 -6.873L4.935 21.75H1.627l7.804-8.914L2.25 2.25h3.308l5.215 6.874 5.215-6.874zm-2.828 17.5l-.783-.008L7.515 4.63h2.098l7.227 8.26L18.244 19.75z"></path></g>
+            </svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=FIi0zMYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+        </a>
+    </div>
+
+</body>
+</html>
