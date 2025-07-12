@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TADucation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Dark slate gray text */
+            padding-top: 4rem; /* Space for fixed navigation bar */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .section-title {
+            border-bottom: 2px solid #cbd5e1; /* Light gray border */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b; /* Darker slate gray for titles */
+        }
+        .link-style {
+            color: #ef4444; /* Red for links */
+            text-decoration: none;
+        }
+        .link-style:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 1.25rem;
+        }
+        h3 {
+            font-size: 1.75rem; /* text-2xl */
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        h4 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #334155;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        /* Logo specific styles for the new logo */
+        :root {
+            --target-color: #E53935;        /* Red for Target */
+            --apply-color: #8E24AA;        /* Purple for Apply */
+            --depart-color: #1E88E5;        /* Blue for Depart */
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-box {
+            background-color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo-box .logo-symbol {
+            width: 2.2rem;
+            height: 2.2rem;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+            animation: bounce 1.6s ease-in-out infinite;
+        }
+        .logo-box .logo-symbol rect {
+            transform-origin: bottom;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        .segment-1 { fill: var(--target-color); animation-delay: 0s; }
+        .segment-2 { fill: var(--apply-color); animation-delay: 0.1s; }
+        .segment-3 { fill: var(--depart-color); animation-delay: 0.2s; }
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+        }
+        .logo-name {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            display: flex;
+            align-items: baseline;
+            color: #1e293b;
+        }
+        .logo-name .t { color: var(--target-color); }
+        .logo-name .a { color: var(--apply-color); }
+        .logo-name .d { color: var(--depart-color); }
+        .logo-name .ucation {
+            font-size: 0.7em;
+            font-weight: 400;
+            color: #334155;
+            margin-left: 0.1em;
+        }
+        .logo-name span:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        .logo-tagline {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #475569;
+            letter-spacing: 0.05em;
+            display: flex;
+            gap: 0.25rem;
+            margin-top: 0.2rem;
+        }
+        .logo-tagline .word {
+            font-weight: 600;
+        }
+        .logo-tagline .target-word { color: var(--target-color); }
+        .logo-tagline .apply-word { color: var(--apply-color); }
+        .logo-tagline .depart-word { color: var(--depart-color); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo-name { font-size: 1.8rem; }
+            .logo-name .ucation { font-size: 0.65em; }
+            .logo-tagline { font-size: 0.7rem; margin-top: 0.1rem; }
+            .logo-box { padding: 0.4rem 0.6rem; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 left-0 w-full bg-red-700 text-white p-4 shadow-md z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="index.html" class="logo-container"> <!-- Link back to home -->
+                <div class="logo-box">
+                    <svg class="logo-symbol" viewBox="0 0 100 100">
+                        <rect class="segment-1" x="10" y="40" width="25" height="20" rx="5" ry="5"/>
+                        <rect class="segment-2" x="38" y="30" width="25" height="40" rx="5" ry="5"/>
+                        <rect class="segment-3" x="66" y="20" width="25" height="60" rx="5" ry="5"/>
+                    </svg>
+                    <div class="logo-text-group">
+                        <div class="logo-name">
+                            <span class="t">T</span><span class="a">A</span><span class="d">D</span><span class="ucation">ucation</span>
+                        </div>
+                        <span class="logo-tagline">
+                            <span class="word target-word">TARGET</span>
+                            <span class="word apply-word">APPLY</span>
+                            <span class="word depart-word">DEPART</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:space-x-10 mt-2 md:mt-0">
+                <a href="index.html#home" class="text-lg font-medium hover:text-red-200 transition-colors">Home</a>
+                <a href="index.html#about-taducation" class="text-lg font-medium hover:text-red-200 transition-colors">About TADucation</a>
+                <a href="index.html#our-mentor" class="text-lg font-medium hover:text-red-200 transition-colors">Our Mentor</a>
+                <a href="index.html#services" class="text-lg font-medium hover:text-red-200 transition-colors">Services</a>
+                <a href="index.html#contact" class="text-lg font-medium hover:text-red-200 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <section id="privacy-content" class="card">
+            <h2 class="text-3xl font-semibold section-title">Privacy Policy</h2>
+            <p class="mb-6 text-gray-700">
+                TADucation is committed to protecting your privacy under the Australian Privacy Principles (APPs) of the Privacy Act 1988 (Cth). This policy explains how we handle your personal information.
+            </p>
+
+            <h3>1. What is Personal Information?</h3>
+            <p>Personal information identifies an individual, whether true or not, and regardless of format.</p>
+
+            <h3>2. Collection of Personal Information</h3>
+            <p>We collect personal information directly from you when you use our services, fill out forms, or communicate with us. This includes your name, email, mobile number, academic history, and career goals.</p>
+            <p>We may also collect non-personal data like browser type and IP address for analytics.</p>
+
+            <h3>3. Purpose of Collection</h3>
+            <p>We collect your information to:</p>
+            <ul>
+                <li>Provide educational consultancy and mentoring.</li>
+                <li>Respond to your inquiries.</li>
+                <li>Communicate service updates and opportunities.</li>
+                <li>Improve our website and services.</li>
+                <li>Comply with legal obligations.</li>
+            </ul>
+
+            <h3>4. Use and Disclosure of Personal Information</h3>
+            <p>We use and disclose your information only for collected purposes, related secondary purposes, or as required by law.</p>
+            <p>We may share your information with:</p>
+            <ul>
+                <li>Third-party service providers (e.g., IT, payment processors).</li>
+                <li>Universities/institutions (with your consent).</li>
+                <li>Government bodies (if legally required).</li>
+            </ul>
+            <h4>Overseas Disclosure</h4>
+            <p>We may disclose information to overseas recipients (e.g., educational institutions) relevant to your study aspirations. We take reasonable steps to ensure they comply with APPs.</p>
+
+            <h3>5. Storage and Security</h3>
+            <p>We take reasonable steps to protect your personal information from misuse, loss, and unauthorized access, using secure servers and access controls.</p>
+
+            <h3>6. Access and Correction</h3>
+            <p>You can request access to or correction of your personal information. Contact us to do so.</p>
+
+            <h3>7. Marketing Communications</h3>
+            <p>You may receive marketing communications from us. You can opt-out anytime via the unsubscribe link or by contacting us.</p>
+
+            <h3>8. Complaints</h3>
+            <p>For privacy complaints, contact us in writing. We will investigate and respond. If unsatisfied, you may contact the Office of the Australian Information Commissioner (OAIC).</p>
+
+            <h3>9. Changes to this Privacy Policy</h3>
+            <p>We may update this policy. The latest version will be posted here.</p>
+
+            <h3>10. Contact Us</h3>
+            <p>For privacy questions, contact us at: <a href="mailto:info@taducation.com" class="link-style">info@taducation.com</a>.</p>
+        </section>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">&copy; 2025 TADucation. All rights reserved.</p>
+            <div class="flex flex-wrap justify-center space-x-4">
+                <a href="terms.html" class="text-gray-300 hover:text-white text-sm">Terms and Conditions</a>
+                <a href="privacy.html" class="text-gray-300 hover:text-white text-sm">Privacy Policy</a>
+                <a href="refunds.html" class="text-gray-300 hover:text-white text-sm">Refund Policy</a>
+            </div>
+            <p class="text-gray-400 text-xs mt-4">Empowering global academic journeys.</p>
+            <p class="text-gray-400 text-xs mt-1">Based in Brisbane, Queensland, Australia.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
