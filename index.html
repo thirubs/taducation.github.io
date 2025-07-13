@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="TADucation" />
+	<link rel="manifest" href="site.webmanifest" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TADucation - Your Gateway to Global Education</title>
@@ -18,7 +24,7 @@
             max-width: 1200px;
         }
         .section-title {
-            border-bottom: 2px solid #cbd5e1; /* Light gray border */
+            border-bottom: 2px solid #d43d3d; /* Light gray border */
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
             color: #1e293b; /* Darker slate gray for titles */
@@ -27,6 +33,7 @@
             color: #ef4444; /* Red for links */
             text-decoration: none;
         }
+
         .link-style:hover {
             text-decoration: underline;
         }
@@ -35,6 +42,7 @@
             border-radius: 0.75rem; /* rounded-xl */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
             padding: 1.5rem;
+			text-align: left;
             margin-bottom: 1.5rem;
         }
         ul {
@@ -140,7 +148,7 @@
         }
         .service-item i {
             font-size: 3rem;
-            color: #ef4444; /* Red icon */
+            /*color: #ef4444;*/ /* Red icon */
             margin-bottom: 1rem;
         }
         .service-item h4 { /* Changed from h3 to h4 for sub-items */
@@ -153,6 +161,23 @@
         .service-item p {
             color: #475569;
         }
+		
+		.service-item-icon-base {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Specific color classes */
+        .icon-tad-target {
+            color: #ef4444; /* Your exact red */
+        }
+        .icon-tad-depart {
+            color: #1E88E5; /* Your exact blue */
+        }
+        .icon-tad-apply {
+            color: #8E24AA; /* Your exact purple */
+        }
+
 
         /* Contact Form Styles */
         .form-group {
@@ -238,6 +263,7 @@
             --apply-color: #8E24AA;        /* Purple for Apply */
             --depart-color: #1E88E5;        /* Blue for Depart */
         }
+		
         .logo-container {
             display: flex;
             align-items: center;
@@ -339,7 +365,7 @@
         /* Floating Social Media Styles for TADucation */
         .social-float-tad {
             position: fixed;
-            right: 0;
+            right: -15px;
             top: 50%;
             transform: translateY(-50%);
             background-color: #ffffff;
@@ -409,6 +435,13 @@
         .text-center .text-green-600 { /* Depart span */
             color: var(--depart-color); /* Use the depart color variable */
         }
+	blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #d43d3d;
+      padding-left: 16px;
+      margin: 20px 0;
+    }
     </style>
 </head>
 <body class="antialiased">
@@ -437,41 +470,46 @@
                 </a>
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:space-x-10 mt-2 md:mt-0">
                 <a href="#home" class="text-lg font-medium hover:text-red-200 transition-colors">Home</a>
-                <a href="#about-taducation" class="text-lg font-medium hover:text-red-200 transition-colors">About TADucation</a>
-                <a href="#our-mentor" class="text-lg font-medium hover:text-red-200 transition-colors">Our Mentor</a>
+                <a href="#about-taducation" class="text-lg font-medium hover:text-red-200 transition-colors">About</a>
+                <a href="#our-mentor" class="text-lg font-medium hover:text-red-200 transition-colors">Mentor</a>
                 <a href="#services" class="text-lg font-medium hover:text-red-200 transition-colors">Services</a>
                 <a href="#contact" class="text-lg font-medium hover:text-red-200 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-2">
         <section id="home" class="hero-section">
             <h1>Unlock Your Global Education Journey</h1>
-            <p>Expert guidance and personalized mentoring for students aspiring to study abroad.</p>
-            <a href="#services" class="hero-button">Explore Our Services</a>
+            <p>Let curiosity drive you. Our mentorship will bring clarity and open the doors to your study abroad dreams!</p>
+            <a href="#about-taducation" class="hero-button">Let's start the journey</a>
         </section>
 
         <section id="about-taducation" class="card">
             <h2 class="text-3xl font-semibold section-title">About TADucation</h2>
             <p class="leading-relaxed">
-                TADucation is an educational consultancy based in Brisbane,Australia, dedicated to empowering students to achieve their dreams of higher education abroad. We offer comprehensive, personalized guidance, from selecting the right program and university to navigating the application process and preparing for a successful academic journey overseas. Our approach is built on understanding each student's unique path, providing tailored support to unlock world-class educational experiences.
+                TADucation is a mentorship initiative for students exploring study opportunities in Australia. This is not an agency — but a space for honest, thoughtful guidance, grounded in academic experience.
             </p>
         </section>
 
         <section id="our-mentor" class="card">
-            <h2 class="text-3xl font-semibold section-title">Our Mentor: Dr. Thiru</h2>
+            <h2 class="text-3xl font-semibold section-title">Our Mentor: Dr. Thirunavukarasu Balasubramaniam</h2>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
-                <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
-                    <img src="Thiru Headshot.jpg" alt="Dr. Thiru Balasubramaniam" class="w-full h-full object-cover">
+                <div class="w-32 h-32 md:w-60 md:h-60 flex-shrink-0 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden shadow-lg">
+                    <img src="Thiru Headshot.png" alt="Dr. Thiru Balasubramaniam" class="w-full h-full object-cover">
                     </div>
                 <p class="leading-relaxed md:text-left text-center">
-                    TADucation is founded by Dr. Thiru, whose extensive personal and professional journey provides unparalleled expertise for aspiring international students. His background highlights a deep understanding of global academic landscapes, as evidenced by his achievements::
+                    TADucation is founded by <a href="https://thiru.info/" class="link-style">Dr. Thiru</a>, whose extensive personal and professional journey provides unparalleled expertise for aspiring international students. 
                 </p>
+				    <blockquote>
+      <span style="font-size: 1rem; color: #d43d3d;">“</span>I come from a humble background where going abroad — let alone studying overseas — felt like a distant dream.<br><br>
+      What changed my path was mentorship. At every stage of my journey, I was supported by individuals who believed in me and offered timely guidance. Without them, I wouldn't be where I am today — living, learning, researching, and teaching in Australia.<br><br>
+      TADucation is my way of offering the same kind of support to future students with similar dreams.<span style="font-size: 1rem; color: #d43d3d;">”</span> - Dr. Thiru.
+    </blockquote>
             </div>
             <ul class="achievements-list">
                 <li><i class="fas fa-flag icon"></i> <strong>Indian-born Australian Citizen:</strong> Dr. Thiru's journey from India to Australian citizenship through education provides a unique and empathetic perspective on international student pathways.</li>
-                <li><i class="fas fa-graduation-cap icon"></i> <strong>PhD in Data Science (QUT, Australia):</strong> Dr. Thiru pursued his Ph.D. directly after his Bachelor of Engineering (BE) through academic research excellence, showcasing a strong foundation in advanced data science.</li>
+                <li><i class="fas fa-graduation-cap icon"></i> <strong>PhD in Data Science (QUT, Australia):</strong> Dr. Thiru pursued his Ph.D. directly after his Bachelor of Engineering (BE) through academic research excellence, showcasing a strong foundation in data science and machine learning.</li>
                 <li><i class="fas fa-medal icon"></i> <strong>Prestigious Scholarships (Totaling ~AUD 261,135 / ~INR 1.44 Crore over 3.5 years):</strong> Recipient of the QUT Postgraduate Research Award (QUTPRA) (~AUD 37,010 / ~INR 20.35 Lakh annually) and Tuition Fee Scholarship (~AUD 37,600 / ~INR 20.68 Lakh annually) for 3.5 years.</li>
                 <li><i class="fas fa-award icon"></i> <strong>National Innovation Visa (Subclass 858):</strong> Granted Permanent Residency for nationally significant achievements, reflecting his significant contributions.</li>
                 <li><i class="fas fa-flask icon"></i> <strong>10 Years of Research Experience:</strong> Extensive background in cutting-edge research, ensuring up-to-date academic insights.</li>
@@ -486,21 +524,21 @@
         </section>
 
         <section id="services" class="card">
-            <h2 class="text-3xl font-semibold section-title">Our Services</h2>
+            <h2 class="text-3xl font-semibold section-title">Services</h2>
             <p class="mb-6 leading-relaxed">
-                At TADucation, our services are tailored to your individual academic profile, aspirations, and circumstances. Dr. Thiru provides personalized mentoring and guidance, supporting students at every level of their higher education journey, from Bachelor's to Master's and PhD.
+                At TADucation, we believe your higher education journey is unique. That's why Dr. Thiru offers personalized mentorship and guidance, warmly supporting you every step of the way. From Bachelor's to Master's and PhD, our support is tailored to your individual academic profile, aspirations, and circumstances, helping you thrive at any stage.
             </p>
 
             <div class="service-group", align="center">
                 <h3><span class="text-blue-600">Target Your Future </span></h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 service-grid">
                     <div class="service-item">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-university service-item-icon-base icon-tad-target"></i>
                         <h4>University & Course Selection</h4>
                         <p>Personalized recommendations based on your academic profile, career goals, and preferences.</p>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                        <i class="fas fa-chalkboard-teacher service-item-icon-base icon-tad-target"></i>
                         <h4>Academic Mentoring (All Levels)</h4>
                         <p>Comprehensive support and mentoring to help you excel in your studies abroad, tailored for Bachelor's, Master's, and PhD levels.</p>
                     </div>
@@ -509,14 +547,14 @@
 
             <div class="service-group">
                 <h3><span class="text-purple-600">Apply with Confidence</span></h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 service-grid">
                     <div class="service-item">
-                        <i class="fas fa-file-alt"></i>
+                        <i class="fas fa-file-alt service-item-icon-base icon-tad-apply"></i>
                         <h4>Application Assistance</h4>
                         <p>Expert guidance on crafting compelling applications, essays, and statements of purpose.</p>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-comments service-item-icon-base icon-tad-apply"></i>
                         <h4>Interview Preparation</h4>
                         <p>Mock interviews and tips to help you confidently ace your university admissions interviews.</p>
                     </div>
@@ -525,14 +563,14 @@
 
             <div class="service-group">
                 <h3><span class="text-green-600">Depart for Success</span></h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 service-grid">
                     <div class="service-item">
-                        <i class="fas fa-globe-americas"></i>
+                        <i class="fas fa-globe-americas service-item-icon-base icon-tad-depart"></i>
                         <h4>Visa Guidance</h4>
                         <p>Support through the student visa application process, ensuring all requirements are met.</p>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-plane-departure"></i>
+                        <i class="fas fa-plane-departure service-item-icon-base icon-tad-depart"></i>
                         <h4>Pre-Departure Briefing</h4>
                         <p>Essential information and advice to prepare you for life and study in a new country.</p>
                     </div>
@@ -541,8 +579,9 @@
         </section>
 
 <section id="contact" class="card">
-    <h2 class="text-3xl font-semibold section-title">Contact Us</h2>
-    <p class="mb-6 text-center text-gray-700">Have questions? Reach out to us using the form below or directly via email.</p>
+    <h2 class="text-3xl font-semibold section-title">Let's Talk</h2>
+    <p class="mb-6 text-left text-gray-700">If you're planning your education journey and would like to have a conversation, feel free to get in touch.
+You can organise a one-on-one session by reaching out through the contact form below or directly via email.</p>
     <form action="https://formspree.io/f/mldnqkby" method="POST" class="max-w-lg mx-auto">
         <div class="form-group">
             <label for="name">Your Name</label>
@@ -559,9 +598,9 @@
                 type="tel"
                 id="mobileNumberCombined"
                 name="mobileNumberCombined"
-                placeholder="e.g., +61 412 345 678 or +91 98765 43210"
+                placeholder="e.g., +91 98765 43210 or +61 412 345 678"
                 pattern="^\+\d{1,4}[-.\s]?\d{6,14}$"
-                title="Please enter your mobile number including country code (e.g., +61 412345678). Allowed: digits, +, spaces, hyphens."
+                title="Please enter your mobile number including country code (e.g., +91 98765 43210). Allowed: digits, +, spaces, hyphens."
                 class="rounded-md"
                 >
         </div>
@@ -587,7 +626,7 @@
 
     </div>
     	<section id="contact" class="card">
-    <h2 class="text-3xl font-semibold section-title">Social Media</h2>
+    <h2 class="text-3xl font-semibold section-title">Connect With Us</h2>
     <div class="flex flex-wrap justify-center gap-6 mt-4">
         <a href="mailto:thirunavukarasu.balas@qut.edu.au" class="text-gray-600 hover:text-blue-600 transition-colors flex flex-col items-center" title="Email">
             <i class="fas fa-envelope text-3xl"></i>
@@ -607,10 +646,6 @@
             </svg>
             <span class="text-sm mt-1">X</span>
         </a>
-        <a href="https://scholar.google.com/citations?user=FIi0zMYAAAAJ&hl=en" class="text-gray-600 hover:text-blue-600 transition-colors flex flex-col items-center" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-            <i class="fas fa-graduation-cap text-3xl"></i>
-            <span class="text-sm mt-1">Scholar</span>
-        </a>
     </div>
 </section>
     <!-- FOOTER WITH LEGAL LINKS -->
@@ -624,6 +659,7 @@
             </div>
             <p class="text-gray-400 text-xs mt-4">Empowering global academic journeys.</p>
             <p class="text-gray-400 text-xs mt-1">Based in Brisbane, Queensland, Australia.</p>
+			<p class="text-gray-400 text-xs mt-1">Australian Business Number: 19202082878.</p>
         </div>
     </footer>
 
@@ -642,9 +678,6 @@
         <svg viewBox="0 0 24 24" aria-hidden="true" class="block">
             <g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.21 -6.873L4.935 21.75H1.627l7.804-8.914L2.25 2.25h3.308l5.215 6.874 5.215-6.874zm-2.828 17.5l-.783-.008L7.515 4.63h2.098l7.227 8.26L18.244 19.75z"></path></g>
         </svg>
-    </a>
-    <a href="https://scholar.google.com/citations?user=FIi0zMYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-        <i class="fas fa-graduation-cap"></i>
     </a>
 </div>
 
